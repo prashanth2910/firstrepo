@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    
+    <style>
+        /* Hear we are using internal CSS. And we are grouping images with marvel and dc class*/
+        .marvel {
+            background-color: red;
+        }
+
+        .dc {
+            background-color: black;
+        }
+
+        /*Hear we are overriding img tag properties with superhero img class properties and only superman and prepinsta image have 
+        their own properties because prepinsta image is outside of super hero class in the body and superman image having its own properties 
+        which cannot be overridden with superhero class properties in body */
+        .superhero img {
+            width: 400px;
+            height: auto;
+            border: 10px solid #3A7EE7;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        img{
+            width: 200px;
+            height: auto;
+        }
+
+        img:hover{
+            /* increases the size by 10% */
+            transform: scale(0.9);
+            transition: all 2s linear; 
+        }
+
+        /* for Superman image we have declared id and given properties which cannot be overridden Generally Id's are decleared by # and Id's
+        are more specific. */
+
+        #superman{
+            width: 300px;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="superhero">
+        <img id = "superman" class="dc " src="Images/superman.png">
+        <img class="dc" src="Images/batman.png">
+        <img class="marvel" src="Images/ironman.png">
+        <img class="marvel" src="Images/captain_america.png">
+    </div>
+
+    <img src="Images/prepinsta_logo.png">
+
+</body>
+
+</html>
